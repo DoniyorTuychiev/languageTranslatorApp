@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background="@drawable/photo"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="-674dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:paddingLeft="10dp"
+                    android:id="@+id/sourceLanguageEt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:background="#F0B1E6ED"
+                    android:hint="@string/typing_here"
+                    android:minHeight="100dp"
+                    android:textColor="@color/black"
+                    android:textColorHint="#787678"
+                    android:textSize="20sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_speech1"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="14dp"
+                    android:backgroundTint="#14A8E5ED"
+                    app:cornerRadius="40dp"
+                    app:icon="@drawable/ic_speaker"
+                    app:iconGravity="textEnd" />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/optionsLl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_above="@+id/translateBtn"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/sourceLanguageChooseBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#C139E6D7"
+                    android:text="@string/english"
+                    android:textColor="#333333"
+                    app:cornerRadius="10dp" />
+
+                <ImageButton
+                    android:id="@+id/replace_language"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:padding="12dp"
+                    android:src="@drawable/forward" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/destinationLanguageChooseBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#D737E8D7"
+                    android:text="@string/uzbek"
+                    android:textColor="#333333"
+                    app:cornerRadius="10dp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/destinationLanguage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0dp"
+                    android:background="#EBA8E5ED"
+                    android:gravity="center"
+                    android:minHeight="100dp"
+                    android:hint="@string/translated_word"
+                    android:textColor="@color/black"
+                    android:textColorHint="#7C7A7C"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btn_speech2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="14dp"
+                        android:backgroundTint="#00D8EEF1"
+                        app:cornerRadius="40dp"
+                        app:icon="@drawable/ic_speaker"
+                        app:iconGravity="textEnd" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+            <!-- 추가 될 function
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_clear"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                android:layout_alignParentStart="true"
+                android:layout_marginEnd="14dp"
+                android:backgroundTint="#809ACFD6"
+                app:cornerRadius="40dp"
+                app:icon="@drawable/ic_delete"
+                app:iconGravity="textEnd"
+                app:strokeColor="#ED3071" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Speed"
+                android:textColor="@color/white"
+                android:textSize="20sp"/>
+            <SeekBar
+                android:id="@+id/seek_bar_speed"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:progress="50"/>
+                -->
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/translateBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:backgroundTint="#39CCBE"
+        android:gravity="center"
+        android:text="@string/translate"
+        android:textColor="#292727"
+        app:cornerRadius="40dp"
+        app:icon="@drawable/translate"
+        app:iconGravity="textStart" />
+
+</RelativeLayout>
